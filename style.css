@@ -12,6 +12,7 @@ body {
     background-image: url(./image.jpg);
     background-size: cover;
     height: 98vh;
+    width: auto;
     perspective: 1000px;
 }
 
@@ -120,7 +121,13 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 360px) and (max-height: 640px) {
+@media screen and (max-height: 480px), (max-width: 793px) {
+    body {
+        height: 128vh;
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 640px), (max-height: 410px) {
     header {
         font-size: 12px;
     }
