@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>3D Form</title>
+
+    <!-- Google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <header>
+        <h1>3D Form <span class="material-symbols-outlined">assignment</span></h1>
+    </header>
+
+    <main>
+        <div>
+            <form onsubmit="javascript: result(this); return false">
+                <label>
+                    Name
+                    <span style="margin-left: 27px;">:</span>
+                    <input type="text" name="name" required>
+                </label>
+                <br><br>
+
+                <label>
+                    Password :
+                    <input type="password" name="password" required>
+                </label>
+                <br><br>
+
+                <label>
+                    Email
+                    <span style="margin-left: 31px;">:</span>
+                    <input type="email" name="email" required>
+                </label>
+                <br><br>
+
+                <button type="submit">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">login</span>
+                    Sign up
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>
