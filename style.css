@@ -7,10 +7,10 @@
 body {
     /*Fallback*/
     background-color: lightskyblue;
-    background-image: linear-gradient(--gradient);
-    background-image: -o-linear-gradient(--gradient);
-    background-image: -moz-linear-gradient(--gradient);
-    background-image: -webkit-linear-gradient(--gradient);
+    background-image: linear-gradient(var(--gradient));
+    background-image: -o-linear-gradient(var(--gradient));
+    background-image: -moz-linear-gradient(var(--gradient));
+    background-image: -webkit-linear-gradient(var(--gradient));
 
     background-image: url(./background-landscape.jpg);
     background-size: cover;
@@ -42,6 +42,7 @@ main {
     min-width: 300px;
     border-radius: 9px;
     box-shadow: 0 7px 7px 3px var(--black1), 0 13px 13px 7px var(--black2);
+    animation: starting 0.75s ease-out;
 
     transition: 1s;
     -o-transition: 1s;
@@ -54,13 +55,6 @@ main {
     -webkit-transform: translate3d(-50%, 0, -270px) rotateX(33deg);
 
     transform-style: inherit;
-
-    /*Initial animation*/
-    @starting-style {
-        opacity: 0;
-        margin-left: 50%;
-        transform: translate3d(-100%, 0, -270px) rotateX(33deg);
-    }
 }
 
 .container:hover, .container:focus-within {
@@ -152,6 +146,18 @@ button {
 button:hover {
     color: white;
     background-color: transparent;
+}
+
+@keyframes starting {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, -270px) rotateX(33deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(-50%, 0, -270px) rotateX(33deg);
+    }
 }
 
 @media only screen and (max-width: 1140px) {
